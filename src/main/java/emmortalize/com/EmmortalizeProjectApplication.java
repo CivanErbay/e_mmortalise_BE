@@ -11,7 +11,5 @@ public class EmmortalizeProjectApplication {
 		SpringApplication.run(EmmortalizeProjectApplication.class, args);
 	}
 
-
-
 }
 
