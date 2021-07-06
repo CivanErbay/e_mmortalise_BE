@@ -18,8 +18,8 @@ public class MemoryService {
        return memoryDb.getMemoryList();
     }
 
-   /* public Memory addMemory(Memory memory ) {
-        memoryDb.save(memory);
-        return memory;
-    }*/
+    public void addMemory(Memory memory) {
+       memoryDb.addMemory(memory);
+    }
+
 }

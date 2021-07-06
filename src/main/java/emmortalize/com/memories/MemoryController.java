@@ -21,8 +21,6 @@ public class MemoryController {
         return memoryService.getMemories();
     }
 
-  /*  @PutMapping
-    public Memory addMemory(@RequestBody Memory memory) {
-        return memoryService.addMemory(memory);
-    }*/
+    @PostMapping
+    public void addMemory(@RequestBody Memory memory) {memoryService.addMemory(memory);}
 }

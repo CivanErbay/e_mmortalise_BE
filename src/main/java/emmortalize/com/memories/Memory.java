@@ -1,14 +1,9 @@
 package emmortalize.com.memories;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
-
 import java.time.LocalDate;
 import java.util.List;
 
-@Document(collection = "memories")
 public class Memory {
-    @Id
     private Long id;
     private String name;
     private List<Number> position;
