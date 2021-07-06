@@ -2,6 +2,7 @@ package emmortalize.com.memories;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
@@ -23,4 +24,12 @@ public class MemoryController {
 
     @PostMapping
     public void addMemory(@RequestBody Memory memory) {memoryService.addMemory(memory);}
+
+    @PostMapping("/uploadImage")
+    public String uploadImage(@RequestParam("imageFile") MultipartFile imageFile) throws Exception {
+        String returnValue = "";
+        memoryService.addImage(imageFile);
+
+        return returnValue;
+    }
 }
